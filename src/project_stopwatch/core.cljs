@@ -44,7 +44,7 @@
                       [:td (get session :date)]
                       [:td (get session :time)]
                       [:td (get session :fee)]
-                      [:td [:i {:onClick (js/alert "Coming soon") :class "fa-solid fa-trash" :style {:cursor "pointer"}}]]])]]
+                      [:td [:i {:onClick #(js/alert "Coming soon") :class "fa-solid fa-trash" :style {:cursor "pointer"}}]]])]]
                 [:p "Bitte öffnen Sie diese Seite mit einem " [:a {:href "https://en.wikipedia.org/wiki/Chromium_(web_browser)#Active" :target :blank} "chromium basierenden Browser"] "!"])]] (.getElementById js/document "app")))
 
 (defn ^:export init! []
