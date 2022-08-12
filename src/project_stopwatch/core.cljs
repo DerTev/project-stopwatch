@@ -3,7 +3,6 @@
    [reagent.core :as r]
    [reagent.dom :as d]
    [clojure.core.async :as async]
-   [cljs.core.async.interop :refer [<p!]]
    [project-stopwatch.utils.file :as file]))
 
 (def directory (r/atom nil))
