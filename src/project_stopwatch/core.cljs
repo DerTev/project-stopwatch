@@ -7,14 +7,20 @@
 
 (def data (r/atom [{:project "Test" :date "20.07.2022" :time "1" :fee "100"}]))
 
+(defn load
+  "Load data"
+  []
+  ; TODO
+  )
+
 (defn save
-  "Write data to data-file"
+  "Save data"
   []
   ; TODO
   )
 
 (defn backup
-  "Create backup from data.json"
+  "Backup data"
   []
   ; TODO
   )
@@ -24,7 +30,7 @@
   (d/render [:div [:div {:class ["header"]}
               [:h1 "Project Stopwatch"]
               (if (boolean (.-chrome js/window)) [:div {:id "actions"} 
-                                                  [:i {:onClick #() :class "fa-solid fa-folder-open" :style {:cursor "pointer"}}]
+                                                  [:i {:onClick #(load) :class "fa-solid fa-folder-open" :style {:cursor "pointer"}}]
                                                   [:i {:onClick #(backup) :class "fa-solid fa-folder-tree ms-2" :style {:cursor "pointer"}}]
                                                   [:i {:onClick #(save) :class "fa-solid fa-floppy-disk ms-2" :style {:cursor "pointer"}}]])]
              [:br]
