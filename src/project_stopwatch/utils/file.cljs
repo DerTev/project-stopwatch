@@ -30,7 +30,7 @@
 (defn read-file
   "Read file"
   [file]
-  (async/go (<p! (.text file))))
+  (async/go (<p! (.text (.getFile file)))))
 
 (defn write-file
   "Write file"
